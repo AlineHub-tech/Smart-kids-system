@@ -1,0 +1,10 @@
+.sk-footer{padding:12px;text-align:center;border-top:1px solid var(--muted);margin-top:24px}
+footer {
+  text-align: center;
+  padding: 20px;
+}
+.footer-logo {border-radius:50%;
+ width:5%;
+  height:5%;
+  margin-bottom: 10px;
+}

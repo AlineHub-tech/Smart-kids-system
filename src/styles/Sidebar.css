@@ -1,0 +1,52 @@
+
+.sk-sidebar{
+  width:220px;
+  padding:16px;
+  border-right:1px solid var(--muted);
+  min-height:calc(100vh - 64px);
+  background:var(--sidebar-bg);
+  transition: width 0.3s;
+}
+
+.side-item{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  padding:10px;
+  border-radius:8px;
+  color:var(--text);
+  text-decoration:none;
+  margin-bottom:6px;
+  transition: all 0.2s;
+}
+
+.side-item:hover{
+  background:var(--hover);
+}
+
+.side-item.active{
+  background:var(--accent);
+  color:white;
+}
+
+.icon{
+  width:28px;
+  height:28px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.label{
+  font-weight:600;
+}
+
+/* Responsive: icons only for tablets & mobiles */
+@media(max-width:1024px){
+  .sk-sidebar{
+    width:70px;
+  }
+  .label{
+    display:none;
+  }
+}

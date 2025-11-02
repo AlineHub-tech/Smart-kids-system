@@ -1,0 +1,28 @@
+.history-container{
+  padding:20px;
+}
+
+.history-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.history-table th, .history-table td{
+  padding:12px;
+  border-bottom:1px solid #ccc;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .history-table th, .history-table td{
+    display:block;
+    width:100%;
+    padding:8px;
+  }
+}
+
+@media(max-width:480px){
+  .history-container{
+    padding:12px;
+  }
+}

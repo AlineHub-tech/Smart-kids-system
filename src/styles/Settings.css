@@ -1,0 +1,33 @@
+.settings-container{
+  padding:20px;
+}
+
+.settings-form{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.settings-form label{
+  font-weight:600;
+}
+
+.settings-form input, .settings-form select{
+  padding:10px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .settings-form input, .settings-form select{
+    padding:8px;
+  }
+}
+
+@media(max-width:480px){
+  .settings-container{
+    padding:12px;
+  }
+}
+

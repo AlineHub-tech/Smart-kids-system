@@ -1,0 +1,5 @@
+.page{padding:20px}
+.cards{display:flex;gap:12px;margin-bottom:18px}
+.card{flex:1;padding:14px;border-radius:8px;border:1px solid var(--muted)}
+.big{font-size:24px;font-weight:700;margin-top:8px}
+.ann{margin-top:12px}

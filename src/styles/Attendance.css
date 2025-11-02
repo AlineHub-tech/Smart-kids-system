@@ -1,0 +1,28 @@
+.attendance-container{
+  padding:20px;
+}
+
+.attendance-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.attendance-table th, .attendance-table td{
+  padding:12px;
+  border-bottom:1px solid #ccc;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .attendance-table th, .attendance-table td{
+    display:block;
+    width:100%;
+    padding:8px;
+  }
+}
+
+@media(max-width:480px){
+  .attendance-container{
+    padding:12px;
+  }
+}

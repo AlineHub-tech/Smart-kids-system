@@ -1,0 +1,29 @@
+.member-container{
+  padding:20px;
+}
+
+.member-list{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.member-list th, .member-list td{
+  padding:12px;
+  border-bottom:1px solid #ccc;
+  text-align:left;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .member-list th, .member-list td{
+    display:block;
+    width:100%;
+    padding:8px;
+  }
+}
+
+@media(max-width:480px){
+  .member-container{
+    padding:12px;
+  }
+}

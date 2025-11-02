@@ -1,0 +1,5 @@
+.sk-navbar{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;box-shadow:0 1px 3px rgba(0,0,0,.06);background:var(--nav-bg);color:var(--text);} 
+.sk-logo{width:40px;height:40px;border-radius:6px;background:linear-gradient(135deg,#1e90ff,#00bfa5);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+.sk-title{margin-left:12px;font-weight:700}
+.nav-left{display:flex;align-items:center}
+.mode-btn{padding:8px 12px;border-radius:6px;border:1px solid rgba(0,0,0,.08);cursor:pointer}
