@@ -1,33 +1,9 @@
-.settings-container{
-  padding:20px;
-}
-
-.settings-form{
-  display:flex;
-  flex-direction:column;
-  gap:16px;
-}
-
-.settings-form label{
-  font-weight:600;
-}
-
-.settings-form input, .settings-form select{
-  padding:10px;
-  border-radius:6px;
-  border:1px solid #ccc;
-}
-
-/* Responsive */
-@media(max-width:768px){
-  .settings-form input, .settings-form select{
-    padding:8px;
-  }
-}
-
-@media(max-width:480px){
-  .settings-container{
-    padding:12px;
-  }
-}
-
+ .page.settings-page { display: flex; min-height: 100vh; background:white;} 
+ .ann-form { display: flex; flex-direction: column; gap: 10px; max-width: 500px; } 
+ .ann-form input, .ann-form textarea { padding: 10px; border-radius: 6px; border: 1px solid #ccc; } 
+ .ann-form button { padding: 8px 12px; border-radius: 6px; border: none; background: #4a6cf7; color: #fff; cursor: pointer; transition: background 0.3s; }
+  .ann-form button:hover { background: #3b53c7; }
+   .dark-mode .ann-form input, .dark-mode .ann-form textarea { background: #2c2c3f; color: #eee; border: 1px 
+  solid #555; } 
+  .dark-mode .ann-form button { background: #6a7cfb; }
+  .dark-mode.page.settings-page {background: #0f0f16; color: #eee; } 

@@ -1,5 +1,38 @@
-.page{padding:20px}
-.cards{display:flex;gap:12px;margin-bottom:18px}
-.card{flex:1;padding:14px;border-radius:8px;border:1px solid var(--muted)}
-.big{font-size:24px;font-weight:700;margin-top:8px}
-.ann{margin-top:12px}
+.page.dashboard-page { display: flex; flex-direction: column; margin-left: 250px; padding: 40px; background: #f7f8fc; min-height: 100vh; transition: margin-left 0.3s, background 0.3s, color 0.3s; }
+
+ .page.dashboard-page .sidebar.collapsed ~ & { margin-left: 70px; }
+
+.top-navbar { display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 15px 25px; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); margin-bottom: 30px; transition: background 0.3s, color 0.3s; }
+.top-navbar { display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 15px 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 3px 12px rgba(0,0,0,0.1); }
+ .attendance-page.dark-mode .top-navbar { background: #2c2c3e; color: #f0f0f0; }
+
+.nav-actions { display: flex; align-items: center; gap: 15px; } 
+.dark-light-toggle { cursor: pointer; font-size: 22px; transition: color 0.3s; } 
+.top-navbar h1 { font-size: 24px; color: #4a6cf7; }
+
+.nav-actions { display: flex; align-items: center; gap: 15px; }
+
+.nav-actions a { text-decoration: none; color: #333; font-weight: 600; transition: color 0.3s; }
+
+.nav-actions a:hover { color: #4a6cf7; }
+
+.dark-light-toggle { cursor: pointer; font-size: 22px; color: #333; transition: color 0.3s; }
+
+.dark-light-toggle:hover { color: #4a6cf7; }
+
+h2 { font-size: 32px; color: #4a6cf7; margin-bottom: 30px; animation: fadeInUp 1s ease; }
+
+.cards { display: flex; gap: 30px; flex-wrap: wrap; margin-bottom: 40px; } .card { flex: 1 1 250px; background: #fff; padding: 30px; border-radius: 16px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; animation: fadeInUp 1s ease; } 
+.card:hover { transform: translateY(-10px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); } .card .big { font-size: 28px; margin-top: 15px; font-weight: 700; color: #333; }
+
+.ann, .about { background: #fff; padding: 25px; border-radius: 16px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin-bottom: 30px; animation: fadeInUp 1s ease; } 
+.ann h3, .about h3 { color: #4a6cf7; margin-bottom: 15px; }
+ .ann ul { list-style: none; padding-left: 0; } 
+ .ann li { margin-bottom: 10px; line-height: 1.6; }
+/* Animations */ @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Responsive */ @media (max-width: 1024px) { .page.dashboard-page { margin-left:30%; padding: 30px; } 
+.cards { flex-direction: row; } }
+
+@media (max-width: 768px) { .page.dashboard-page { margin-left:17%; padding: 20px; } 
+.top-navbar { flex-direction: row;  gap: 10px; } .nav-actions { gap: 10px; } }
