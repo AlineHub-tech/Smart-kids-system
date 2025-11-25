@@ -1,29 +1,44 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+// Sidebar.jsx
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { FaTachometerAlt, FaUsers, FaRegCalendarAlt, FaHistory, FaInfoCircle, FaCog, FaSignOutAlt, FaUsersCog } from 'react-icons/fa';
 import '../styles/Sidebar.css';
-import { IconDashboard, IconMember, IconAttendance, IconHistory, IconSettings, IconCollab, IconInfo, IconLogin, IconLogout } from '../icons';
+import logo from "../assets/logo.jpg";
 
-export default function Sidebar({ isOpen, toggleSidebar }){
-  const items = [
-    {to:'/dashboard', label:'Dashboard', icon:<IconDashboard/>},
-    {to:'/member', label:'Member', icon:<IconMember/>},
-    {to:'/attendance', label:'Attendance', icon:<IconAttendance/>},
-    {to:'/history', label:'History', icon:<IconHistory/>},
-    {to:'/settings', label:'Setting', icon:<IconSettings/>},
-    {to:'/collaboration', label:'Collaboration', icon:<IconCollab/>},
-    {to:'/info', label:'Info', icon:<IconInfo/>},
-    {to:'/login', label:'Login', icon:<IconLogin/>},
-    {to:'/logout', label:'Logout', icon:<IconLogout/>},
+export default function Sidebar() {
+  const [sidebarClosed, setSidebarClosed] = useState(false);
+  const location = useLocation();
+
+  const toggleSidebar = () => setSidebarClosed(!sidebarClosed);
+
+  const menuItems = [
+    { icon: <FaTachometerAlt />, label: 'Dashboard', path: '/dashboard' },
+    { icon: <FaRegCalendarAlt />, label: 'Attendance', path: '/attendance' },
+    { icon: <FaUsers />, label: 'Members', path: '/member' },
+    { icon: <FaHistory />, label: 'History', path: '/history' },
+    { icon: <FaInfoCircle />, label: 'Info', path: '/info' },
+    { icon: <FaCog />, label: 'Settings', path: '/settings' },
+    { icon: <FaUsersCog />, label: 'Collaboration', path: '/collaboration' },
+    { icon: <FaSignOutAlt />, label: 'Logout', path: '/login' },
   ];
 
   return (
-   <aside className="sk-sidebar">
-      {items.map(i=> (
-        <NavLink to={i.to} key={i.to} className={({isActive})=> 'side-item' + (isActive? ' active':'')}>
-          <span className="icon">{i.icon}</span>
-          <span className="label">{i.label}</span>
-        </NavLink>
-      ))}
-    </aside>
+    <div className={`sidebar ${sidebarClosed ? 'closed' : ''}`}>
+      <div className='logoo' onClick={toggleSidebar}>
+        <img src={logo} alt="logo" className="logo" />
+        {!sidebarClosed && <span>SK</span>}
+      </div>
+      <ul>
+        {menuItems.map((item, idx) => (
+          <li key={idx} className={location.pathname === item.path ? 'active' : ''}>
+            {/* Link igomba gufata icon na label byose */}
+            <Link to={item.path} className='menu-link'>
+              {item.icon}
+              {!sidebarClosed && <span className='label'>{item.label}</span>}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
